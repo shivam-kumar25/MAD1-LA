@@ -1,0 +1,33 @@
+/*    */
+body {
+    background-color: #fdfdbb;
+}
+
+/*    */
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+/*  class selector, .  */
+.text_blue_ {
+    color: #0000ff;
+}
+
+/*  class selector, .   */
+._footer_ {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+/*  class selector, .   */
+._Home_title_{
+    text-align: center;
+}
+
+/*     */
+div{
+    margin: 20px;
+}

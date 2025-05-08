@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+</head>
+<body>
+       
+       <!-- ########################################################################################################
+       #
+       ######################################################################################################### -->       
+       <h1> Courses List           <a href="/" style="margin-left: 70% ;"> Go to Students </a> </h1>
+
+
+
+       
+
+       <!--  ####################################################################################################### 
+       # 
+       ######################################################################################################## -->
+       {% if all_courses_ == [] %}
+              <p> No courses found. Add the courses now! </p>
+             
+       
+
+
+
+       <!--  ####################################################################################################### 
+       # 
+       ######################################################################################################## -->
+       {% else %}
+              <table id = "all-courses" border="5px" >
+                     <tr>
+                            <th>SNo</th>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Course Description</th>
+                            <th>Actions</th>
+                     </tr>
+                     
+
+                     <!-- #####################################################################################################
+                     
+                     #######################################################################################################-->
+                     {% for course_ in all_courses_ %}
+                     <tr>
+                            <td>  {{ course_.course_id }}  </td> 
+                            <td> <a href="/course/{{ course_.course_id }}">  {{ course_.course_code }} </a> </td>
+                            <td> {{ course_.course_name }} </td>
+                            <td> {{ course_.course_description  }} </td>
+                            <td>
+                                   <a href="/course/{{ course_.course_id }}/update" type="button"> Update </a>
+                                   <a href="/course/{{ course_.course_id }}/delete" type="button"> Delete </a>
+                            </td>
+                     </tr>
+                     {% endfor %}
+
+              </table>
+
+       {% endif %}
+
+
+       <a href="/course/create" > +Add Course </a>
+
+</body>
+</html>

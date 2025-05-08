@@ -1,0 +1,19 @@
+body{
+    background-color: #fdfdbb;
+}
+
+a{
+    color: #ff0000;
+    text-decoration: none;
+}
+
+#text_blue_{
+    color: #0000ff;
+}
+
+#_footer_{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
